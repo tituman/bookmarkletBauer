@@ -15,29 +15,136 @@ var abgShortname;
 
 
 var kst = [
-	{key : "5501384", description : "key account", shortname: "keyAccnt"},
-	{key : "5501386", description : "Area Sales, DACH", shortname: "DACH"},
-	{key : "5501387", description : "New Countries", shortname: "NewC"},
-	{key : "5501700", description : "Korea", shortname: "KR"},
-	{key : "5501179", description : "USA + Canada", shortname: "USA"},
-	{key : "5501388", description : "CN", shortname: "CN"},
-	{key : "5501389", description : "Taiwan", shortname: "TW"},
-	{key : "7993221", description : "Appl", shortname: "Appl"},
-	{key : "5501821", description : "Appl Entwickl", shortname: "ApplEntw"}
+	{key : "101894720030", description : "CN_int", shortname: "CN_int"},
+	{key : "101894730030", description : "TR_int", shortname: "TR_int"},
+	{key : "101895130010", description : "TTM_int", shortname: "TTM_int"},
+	{key : "101894740030", description : "TW_int", shortname: "TW_int"},
+	{key : "101894750030", description : "USA_int", shortname: "USA_int"},
+	{key : "101894980010", description : "Ropick_int", shortname: "Ropick_int"},
+	{key : "101894760030", description : "KR_int", shortname: "KR_int"},
+	{key : "101894970010", description : "Pesterpac_int", shortname: "Pesterpac_int"},
+	{key : "101895000010", description : "Güdel_int", shortname: "Güdel_int"},
+	{key : "101895010010", description : "Novitas_int", shortname: "Novitas_int"},
+	{key : "101895040010", description : "Schunk_int", shortname: "Schunk_int"},
+	{key : "101895050010", description : "Gomtech_int", shortname: "Gomtech_int"},
+	{key : "101895060010", description : "Sixjet AG (MABI)_int", shortname: "Sixjet AG (MABI)_int"},
+	{key : "101895090010", description : "IGM_int", shortname: "IGM_int"},
+	{key : "101895110010", description : "Manz_int", shortname: "Manz_int"},
+	{key : "101895120010", description : "Lti Drives GmbH_int", shortname: "Lti Drives GmbH_int"},
+	{key : "101941030010", description : "Hiwin GmbH_int", shortname: "Hiwin GmbH_int"},
+	{key : "101895070010", description : "Felmec SRL_int", shortname: "Felmec SRL_int"},
+	{key : "101895080010", description : "Comau_int", shortname: "Comau_int"},
+	{key : "101895030010", description : "SACMI COOPERATIVE (Sytrama)_int", shortname: "SACMI COOPERATIVE (Sytrama)_int"},
+	{key : "101894990010", description : "Maspack SRL_int", shortname: "Maspack SRL_int"},
+	{key : "101895140010", description : "CMA_int", shortname: "CMA_int"},
+	{key : "101895150010", description : "GEM SRL_int", shortname: "GEM SRL_int"},
+	{key : "101895160010", description : "C.I.A. SRL_int", shortname: "C.I.A. SRL_int"},
+	{key : "101940280010", description : "For.El SPA_int", shortname: "For.El SPA_int"},
+	{key : "101895170010", description : "Motor Power Company_int", shortname: "Motor Power Company_int"},
+	{key : "101942610010", description : "Tecno Pack_int", shortname: "Tecno Pack_int"},
+	{key : "101895020010", description : "SP_int", shortname: "SP_int"},
+	{key : "101894960010", description : "Electro AB (Blueprint)_int", shortname: "Electro AB (Blueprint)_int"},
+	{key : "101895100010", description : "Natreb Brazil_int", shortname: "Natreb Brazil_int"},
+	{key : "101917630010", description : "ABB Schweden_int", shortname: "ABB Schweden_int"},
+	{key : "101948520010", description : "LTI Motion GmbH_int", shortname: "LTI Motion GmbH_int"},
+	{key : "101894720040", description : "CN_ext", shortname: "CN_ext"},
+	{key : "101894730040", description : "TR_ext", shortname: "TR_ext"},
+	{key : "101895130020", description : "TTM_ext", shortname: "TTM_ext"},
+	{key : "101894740040", description : "TW_ext", shortname: "TW_ext"},
+	{key : "101894750040", description : "USA_ext", shortname: "USA_ext"},
+	{key : "101894980020", description : "Ropick_ext", shortname: "Ropick_ext"},
+	{key : "101894760040", description : "KR_ext", shortname: "KR_ext"},
+	{key : "101894970020", description : "Pesterpac_ext", shortname: "Pesterpac_ext"},
+	{key : "101895000020", description : "Güdel_ext", shortname: "Güdel_ext"},
+	{key : "101895010020", description : "Novitas_ext", shortname: "Novitas_ext"},
+	{key : "101895040020", description : "Schunk_ext", shortname: "Schunk_ext"},
+	{key : "101895050020", description : "Gomtech_ext", shortname: "Gomtech_ext"},
+	{key : "101895060020", description : "Sixjet AG (MABI)_ext", shortname: "Sixjet AG (MABI)_ext"},
+	{key : "101895090020", description : "IGM_ext", shortname: "IGM_ext"},
+	{key : "101895110020", description : "Manz_ext", shortname: "Manz_ext"},
+	{key : "101895120020", description : "Lti Drives GmbH_ext", shortname: "Lti Drives GmbH_ext"},
+	{key : "101941030020", description : "Hiwin GmbH_ext", shortname: "Hiwin GmbH_ext"},
+	{key : "101895070020", description : "Felmec SRL_ext", shortname: "Felmec SRL_ext"},
+	{key : "101895080020", description : "Comau_ext", shortname: "Comau_ext"},
+	{key : "101895030020", description : "SACMI COOPERATIVE (Sytrama)_ext", shortname: "SACMI COOPERATIVE (Sytrama)_ext"},
+	{key : "101894990020", description : "Maspack SRL_ext", shortname: "Maspack SRL_ext"},
+	{key : "101895140020", description : "CMA_ext", shortname: "CMA_ext"},
+	{key : "101895150020", description : "GEM SRL_ext", shortname: "GEM SRL_ext"},
+	{key : "101895160020", description : "C.I.A. SRL_ext", shortname: "C.I.A. SRL_ext"},
+	{key : "101940280020", description : "For.El SPA_ext", shortname: "For.El SPA_ext"},
+	{key : "101895170020", description : "Motor Power Company_ext", shortname: "Motor Power Company_ext"},
+	{key : "101942610020", description : "Tecno Pack_ext", shortname: "Tecno Pack_ext"},
+	{key : "101895020020", description : "SP_ext", shortname: "SP_ext"},
+	{key : "101894960020", description : "Electro AB (Blueprint)_ext", shortname: "Electro AB (Blueprint)_ext"},
+	{key : "101895100020", description : "Natreb Brazil_ext", shortname: "Natreb Brazil_ext"},
+	{key : "101917630020", description : "ABB Schweden_ext", shortname: "ABB Schweden_ext"}
 ];
 var kstShortname;
 
 var buchungsMatrix = [
-	{key : "5501384", 	allowedVals : ["150","151","545","565","582","590","592","605"]},
-	{key : "5501386", 	allowedVals : ["150","151","545","565","582","590","592","605","615"]},	
-	{key : "5501387", 	allowedVals : ["150","151","545","565","582","590","592","605","615"]},
-	{key : "5501700", 	allowedVals : ["150","151","545","565","582","590","592","605","615"]},
-	{key : "5501179", 	allowedVals : ["150","151","545","565","582","590","592","605","615"]},
-	{key : "5501388", 	allowedVals : ["150","151","545","565","582","590","592","605","615"]},
-	{key : "5501389", 	allowedVals : ["150","151","545","565","582","590","592","605","615"]},
-	{key : "7993221", 	allowedVals : ["MT0","150","565","582"]},
-	{key : "5501821", 	allowedVals : ["545","565","582"]},
-	{key : "1", 		allowedVals : ["MT0","150","151","545","565","582","590","592","605","615"]}
+	{key : "101894720030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894730030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895130010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894740030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894750030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894980010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894760030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894970010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895000010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895010010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895040010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895050010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895060010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895090010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895110010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895120010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101941030010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895070010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895080010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895030010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894990010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895140010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895150010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895160010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101940280010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895170010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101942610010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895020010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894960010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895100010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101917630010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101948520010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894720040",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894730040",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895130020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894740040",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894750040",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894980020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894760040",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894970020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895000020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895010020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895040020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895050020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895060020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895090020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895110020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895120020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101941030020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895070020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895080020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895030020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894990020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895140020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895150020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895160020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101940280020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895170020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101942610020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895020020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101894960020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101895100020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101917630020",   	allowedVals : ["150","151","545","565","582","590","592","605"]}
 ];
 
 var i, theContainer, theSelect, numOptions, anOption, theSelectAbg, theContainerAbg, numOptionsAbg, onceFocussed, kstManual, abgManual;
@@ -236,14 +343,23 @@ function showBookmarklet() {
 	document.getElementById('idp').hidden=false;
 	
 		
-	var bookmarkLink = "javascript:function Func1(){var iframe=document.getElementById('lower');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var elm=innerDoc.getElementById('ok');elm.focus();simulateClick(elm);return;}function Func2(){var iframe=document.getElementById('app');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var elms=innerDoc.getElementsByClassName('p1006infotableicons');var elm;for(var i=0;i<elms.length;i++){if(elms[i].title=='n%C3%A4chste Tagesansicht'){elm=elms[i];break;}}elm.focus();simulateClick(elm);return;}function simulateClick(elm){var evt=document.createEvent('MouseEvents');evt.initMouseEvent('click',true,true,window,0,0,0,0,0,false,false,false,false,0,null);var canceled=!elm.dispatchEvent(evt);if(canceled){}else{}return;}function findNextemptyCell(innerDoc){var cell;var p0='p0';var emptyCellName=0;for(var i=1;i<8;i++){emptyCellName=4+(i*100);cell=innerDoc.getElementsByName(p0+emptyCellName);if(cell===null||cell=='undefined'||cell===0){return 0;}else{if(cell[0].value===''){return i;}}}}function doIt(){var iframe=document.getElementById('app');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var cell1,cell2,cell3;var p0='p0';var cell1name=4;var cell2name=5;var cell3name=6;var emptyCellNumber=findNextemptyCell(innerDoc);if(emptyCellNumber<1||emptyCellNumber>7){alert('cell error!');return;}if(cell1=innerDoc.getElementsByName(p0+(cell1name+(emptyCellNumber*100)))){cell1[0].value='++.++';}if(cell2=innerDoc.getElementsByName(p0+(cell2name+(emptyCellNumber*100)))){cell2[1].value='";
+	var bookmarkLink = "javascript:function Func1(){var iframe=document.getElementById('lower');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var elm=innerDoc.getElementById('ok');elm.focus();simulateClick(elm);return;}function Func2(){var iframe=document.getElementById('app');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var elms=innerDoc.getElementsByClassName('p1006infotableicons');var elm;elm=elms[3];elm.focus();simulateClick(elm);return;}function simulateClick(elm){var evt=document.createEvent('MouseEvents');evt.initMouseEvent('click',true,true,window,0,0,0,0,0,false,false,false,false,0,null);var canceled=!elm.dispatchEvent(evt);if(canceled){}else{}return;}function findNextemptyCell(innerDoc){var cell;var p0='p0';var emptyCellName=0;for(var i=1;i<8;i++){emptyCellName=4+(i*100);cell=innerDoc.getElementsByName(p0+emptyCellName);if(cell===null||cell=='undefined'||cell===0){return 0;}else{if(cell[0].value===''){return i;}}}}function doIt(){var iframe=document.getElementById('app');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var cell1,cell2,cell3;var p0='p0';var cell1name=4;var cell2name=5;var cell3name=6;var emptyCellNumber=findNextemptyCell(innerDoc);if(emptyCellNumber<1||emptyCellNumber>7){alert('cell error!');return;}if(cell1=innerDoc.getElementsByName(p0+(cell1name+(emptyCellNumber*100)))){cell1[0].value='++.++';}if(cell2=innerDoc.getElementsByName(p0+(cell2name+(emptyCellNumber*100)))){cell2[0].value='";
 	bookmarkLink = bookmarkLink + kstLinkText;
-	bookmarkLink = bookmarkLink + "';}if(cell3=innerDoc.getElementsByName(p0+(cell3name+(emptyCellNumber*100)))){cell3[1].value=";
-	bookmarkLink = bookmarkLink + "'" + abgLinkText + "'";
-	bookmarkLink = bookmarkLink + ";}setTimeout('Func1()',750);setTimeout(function(){Func2();},2000);}doIt();void(null);";
+	bookmarkLink = bookmarkLink + "';}if(cell3=innerDoc.getElementsByName(p0+(cell3name+(emptyCellNumber*100)))){cell3[0].value='";
+	bookmarkLink = bookmarkLink + abgLinkText;
+	bookmarkLink = bookmarkLink + "';}setTimeout('Func1()',750);setTimeout(function(){Func2();},6000);}doIt();void(null);";
 	
 	linkShow.href = bookmarkLink;
 	
+}
+
+function addTeilen(){
+	
+ var linkteilen = document.getElementById('idLinkTeilen');
+	linkteilen.textContent = 'LaenderTeilen';
+	var bookmarkLink = "javascript:function Func1(){var iframe=document.getElementById('lower');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var elm=innerDoc.getElementById('ok');elm.focus();simulateClick(elm);return;}function Func2(){var iframe=document.getElementById('app');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var elms=innerDoc.getElementsByClassName('p1006infotableicons');var elm;elm=elms[3];elm.focus();simulateClick(elm);return;}function simulateClick(elm){var evt=document.createEvent('MouseEvents');evt.initMouseEvent('click',true,true,window,0,0,0,0,0,false,false,false,false,0,null);var canceled=!elm.dispatchEvent(evt);if(canceled){}else{}return;}function findNextemptyCell(innerDoc){var cell;var p0='p0';var emptyCellName=0;for(var i=1;i<8;i++){emptyCellName=4+(i*100);cell=innerDoc.getElementsByName(p0+emptyCellName);if(cell===null||cell=='undefined'||cell===0){return 0;}else{if(cell[0].value===''){return i;}}}}function doIt(){var arbeitsgang=window.prompt('Enter your arbeitsgang (docu: 545)','545');var iframe=document.getElementById('app');var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var cell1,cell2,cell3;var p0='p0';var cell1name=4;var cell2name=5;var cell3name=6;var innerDoc=iframe.contentDocument||iframe.contentWindow.document;var x=innerDoc.getElementsByClassName('p1007scopeinfotable');var istTime=parseFloat(x[1].rows[1].cells[1].outerText.split('/')[1]);var istTimeDiv4=(istTime/4.0).toFixed(2);var arrKst=['101894720030','101894750030','101894760030','5501907'];for(var i=0;i<4;i++){var emptyCellNumber=findNextemptyCell(innerDoc);if(emptyCellNumber<1||emptyCellNumber>7){alert('cell error!');return;}if(cell1=innerDoc.getElementsByName(p0+(cell1name+(emptyCellNumber*100)))){if(i==3)cell1[0].value='++.++';else cell1[0].value=istTimeDiv4;}if(cell2=innerDoc.getElementsByName(p0+(cell2name+(emptyCellNumber*100)))){cell2[0].value=arrKst[i];}if(cell3=innerDoc.getElementsByName(p0+(cell3name+(emptyCellNumber*100)))){cell3[0].value=arbeitsgang;}}setTimeout('Func1()',750);setTimeout(function(){Func2();},6000);}doIt();void(null);";
+	linkteilen.href = bookmarkLink;
+
 }
 
 // Add the <div> to the DOM, then add the <select> to the <div>
@@ -255,5 +371,8 @@ theContainer.appendChild(theSelect);
 // arbeitsgang containers
 document.getElementById('container_for_abg').appendChild(theContainerAbg);
 theContainerAbg.appendChild(theSelectAbg);
+
+//link for laender teilen
+	addTeilen();
 }
 

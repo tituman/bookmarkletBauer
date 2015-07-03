@@ -11,12 +11,7 @@ function Func2() {
 	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 	var elms = innerDoc.getElementsByClassName('p1006infotableicons');
 	var elm;
-	for (var i = 0; i < elms.length; i++) {
-		if (elms[i].title == 'nächste Tagesansicht') {
-			elm = elms[i];
-			break;
-		}
-	}
+	elm = elms[3];
 	elm.focus();
 	simulateClick(elm);
 	return;
@@ -30,7 +25,6 @@ function simulateClick(elm) {
 
 	return;
 }
-
 function findNextemptyCell(innerDoc) {
 	var cell;
 	var p0 = 'p0';
@@ -40,48 +34,52 @@ function findNextemptyCell(innerDoc) {
 		cell = innerDoc.getElementsByName(p0 + emptyCellName);
 		if (cell === null || cell == 'undefined' || cell === 0) {
 			return 0;
-		}
-		else {
+		} else {
 			if (cell[0].value === '') {
-			return i;
+				return i;
 			}
 		}
 	}
 }
-
 function doIt() {
+	var arbeitsgang = window.prompt('Enter your arbeitsgang (docu: 545)', '545');
 	var iframe = document.getElementById('app');
 	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 	var cell1,
 	cell2,
 	cell3;
-	/* find next empty cell and write our time */
 	var p0 = 'p0';
 	var cell1name = 4;
 	var cell2name = 5;
 	var cell3name = 6;
 	
-	var emptyCellNumber = findNextemptyCell(innerDoc);
-	if (emptyCellNumber < 1 || emptyCellNumber > 7) {
-		alert('cell error!');
-		return;
+	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+	var x = innerDoc.getElementsByClassName("p1007scopeinfotable");
+	var istTime = parseFloat(x[1].rows[1].cells[1].outerText.split("/")[1]);
+	var istTimeDiv4 = (istTime/4.0).toFixed(2);
+	var arrKst = ['101894720030','101894750030','101894760030','5501907'];
+	for(var i=0; i<4; i++)
+	{
+		var emptyCellNumber = findNextemptyCell(innerDoc);
+		if (emptyCellNumber < 1 || emptyCellNumber > 7) {
+			alert('cell error!');
+			return;
+		}
+		if (cell1 = innerDoc.getElementsByName(p0 + (cell1name + (emptyCellNumber * 100)))) {
+			if (i == 3) cell1[0].value = '++.++';
+			else cell1[0].value = istTimeDiv4;
+		}
+		if (cell2 = innerDoc.getElementsByName(p0 + (cell2name + (emptyCellNumber * 100)))) {
+			cell2[0].value = arrKst[i];
+		}
+		if (cell3 = innerDoc.getElementsByName(p0 + (cell3name + (emptyCellNumber * 100)))) {
+			cell3[0].value = arbeitsgang;
+		}
 	}
-	
-	if (cell1 = innerDoc.getElementsByName(p0 + (cell1name + (emptyCellNumber * 100)))) {
-		cell1[0].value = '++.++';
-	}
-	if (cell2 = innerDoc.getElementsByName(p0 + (cell2name + (emptyCellNumber * 100)))) {
-		cell2[0].value = '1234';
-	}
-	if (cell3 = innerDoc.getElementsByName(p0 + (cell3name + (emptyCellNumber * 100)))) {
-		cell3[0].value = '567';
-	}
-	
 	setTimeout('Func1()', 750);
-	/*setTimeout(function () {
+	setTimeout(function () {
 		Func2();
-	}, 2000);*/
-	
+	}, 6000);
 }
 doIt();
 void(null);

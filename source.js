@@ -11,12 +11,7 @@ function Func2() {
 	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 	var elms = innerDoc.getElementsByClassName('p1006infotableicons');
 	var elm;
-	for (var i = 0; i < elms.length; i++) {
-		if (elms[i].title == 'nächste Tagesansicht') {
-			elm = elms[i];
-			break;
-		}
-	}
+	elm = elms[3];
 	elm.focus();
 	simulateClick(elm);
 	return;
@@ -30,7 +25,6 @@ function simulateClick(elm) {
 
 	return;
 }
-
 function findNextemptyCell(innerDoc) {
 	var cell;
 	var p0 = 'p0';
@@ -40,48 +34,41 @@ function findNextemptyCell(innerDoc) {
 		cell = innerDoc.getElementsByName(p0 + emptyCellName);
 		if (cell === null || cell == 'undefined' || cell === 0) {
 			return 0;
-		}
-		else {
+		} else {
 			if (cell[0].value === '') {
-			return i;
+				return i;
 			}
 		}
 	}
 }
-
 function doIt() {
 	var iframe = document.getElementById('app');
 	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 	var cell1,
 	cell2,
 	cell3;
-	/* find next empty cell and write our time */
 	var p0 = 'p0';
 	var cell1name = 4;
 	var cell2name = 5;
 	var cell3name = 6;
-	
 	var emptyCellNumber = findNextemptyCell(innerDoc);
 	if (emptyCellNumber < 1 || emptyCellNumber > 7) {
 		alert('cell error!');
 		return;
 	}
-	
 	if (cell1 = innerDoc.getElementsByName(p0 + (cell1name + (emptyCellNumber * 100)))) {
 		cell1[0].value = '++.++';
 	}
 	if (cell2 = innerDoc.getElementsByName(p0 + (cell2name + (emptyCellNumber * 100)))) {
-		cell2[0].value = '1234';
+		cell2[0].value = '101894980010';
 	}
 	if (cell3 = innerDoc.getElementsByName(p0 + (cell3name + (emptyCellNumber * 100)))) {
-		cell3[0].value = '567';
+		cell3[0].value = '590';
 	}
-	
 	setTimeout('Func1()', 750);
-	/*setTimeout(function () {
+	setTimeout(function () {
 		Func2();
-	}, 2000);*/
-	
+	}, 6000);
 }
 doIt();
 void(null);
