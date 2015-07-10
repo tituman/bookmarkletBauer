@@ -15,6 +15,9 @@ var abgShortname;
 
 
 var kst = [
+	{key : "7993221", description : "Kostenstelle", shortname: "KST"},
+	{key : "5501906", description : "Solution Motion Mgmt", shortname: "SolMngmt"},
+	{key : "5501907", description : "Solution Motion Dienstleistung", shortname: "SolDienstLg"},
 	{key : "101894720030", description : "CN_int", shortname: "CN_int"},
 	{key : "101894730030", description : "TR_int", shortname: "TR_int"},
 	{key : "101895130010", description : "TTM_int", shortname: "TTM_int"},
@@ -82,6 +85,9 @@ var kst = [
 var kstShortname;
 
 var buchungsMatrix = [
+	{key : "7993221", 			allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "5501906", 			allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "5501907", 			allowedVals : ["150","151","545","565","582","590","592","605"]},
 	{key : "101894720030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
 	{key : "101894730030",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
 	{key : "101895130010",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
