@@ -50,6 +50,7 @@ var kst = [
 	{key : "101895100010", description : "Natreb Brazil_int", shortname: "Natreb Brazil_int"},
 	{key : "101917630010", description : "ABB Schweden_int", shortname: "ABB Schweden_int"},
 	{key : "101948520010", description : "LTI Motion GmbH_int", shortname: "LTI Motion GmbH_int"},
+	{key : "101977030010", description : "Technosert GmbH_int", shortname: "Technosert_int"},
 	{key : "101894720040", description : "CN_ext", shortname: "CN_ext"},
 	{key : "101894730040", description : "TR_ext", shortname: "TR_ext"},
 	{key : "101895130020", description : "TTM_ext", shortname: "TTM_ext"},
@@ -80,7 +81,8 @@ var kst = [
 	{key : "101895020020", description : "SP_ext", shortname: "SP_ext"},
 	{key : "101894960020", description : "Electro AB (Blueprint)_ext", shortname: "Electro AB (Blueprint)_ext"},
 	{key : "101895100020", description : "Natreb Brazil_ext", shortname: "Natreb Brazil_ext"},
-	{key : "101917630020", description : "ABB Schweden_ext", shortname: "ABB Schweden_ext"}
+	{key : "101917630020", description : "ABB Schweden_ext", shortname: "ABB Schweden_ext"},
+	{key : "101977030020", description : "Technosert GmbH_ext", shortname: "Technosert_ext"}
 ];
 var kstShortname;
 
@@ -150,7 +152,9 @@ var buchungsMatrix = [
 	{key : "101895020020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
 	{key : "101894960020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
 	{key : "101895100020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
-	{key : "101917630020",   	allowedVals : ["150","151","545","565","582","590","592","605"]}
+	{key : "101917630020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101977030020",   	allowedVals : ["150","151","545","565","582","590","592","605"]},
+	{key : "101977030010",   	allowedVals : ["150","151","545","565","582","590","592","605"]}	
 ];
 
 var i, theContainer, theSelect, numOptions, anOption, theSelectAbg, theContainerAbg, numOptionsAbg, onceFocussed, kstManual, abgManual;
