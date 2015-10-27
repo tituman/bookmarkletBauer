@@ -82,7 +82,8 @@ var kst = [
 	{key : "101894960020", description : "Electro AB (Blueprint)_ext", shortname: "Electro AB (Blueprint)_ext"},
 	{key : "101895100020", description : "Natreb Brazil_ext", shortname: "Natreb Brazil_ext"},
 	{key : "101917630020", description : "ABB Schweden_ext", shortname: "ABB Schweden_ext"},
-	{key : "101977030020", description : "Technosert GmbH_ext", shortname: "Technosert_ext"}
+	{key : "101977030020", description : "Technosert GmbH_ext", shortname: "Technosert_ext"},
+	{key : "5503062", description : "Q_Kosten", shortname: "Q_kst"}
 ];
 var kstShortname;
 
