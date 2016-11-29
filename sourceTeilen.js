@@ -54,11 +54,11 @@ function doIt() {
 	var cell3name = 6;
 	
 	var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-	var x = innerDoc.getElementsByClassName("p1007scopeinfotable");
-	var istTime = parseFloat(x[1].rows[1].cells[1].outerText.split("/")[1]);
-	var istTimeDiv4 = (istTime/4.0).toFixed(2);
-	var arrKst = ['101894720030','101894750030','101894760030','5501907'];
-	for(var i=0; i<4; i++)
+	var x = innerDoc.getElementsByClassName('p1007scopeinfotable');
+	var istTime = parseFloat(x[1].rows[1].cells[1].outerText.split('/')[1]);
+	var arrKst = ['101894720030','101894730030','101894740030','101894750030','101894760030','102159170010','101895020010','5503109'];
+	var istTimeDiv = (istTime/arrKst.length).toFixed(2);
+	for(var i=0; i<arrKst.length; i++)
 	{
 		var emptyCellNumber = findNextemptyCell(innerDoc);
 		if (emptyCellNumber < 1 || emptyCellNumber > 7) {
@@ -66,8 +66,8 @@ function doIt() {
 			return;
 		}
 		if (cell1 = innerDoc.getElementsByName(p0 + (cell1name + (emptyCellNumber * 100)))) {
-			if (i == 3) cell1[0].value = '++.++';
-			else cell1[0].value = istTimeDiv4;
+			if (i == arrKst.length-1) cell1[0].value = '++.++';
+			else cell1[0].value = istTimeDiv;
 		}
 		if (cell2 = innerDoc.getElementsByName(p0 + (cell2name + (emptyCellNumber * 100)))) {
 			cell2[0].value = arrKst[i];
@@ -79,7 +79,7 @@ function doIt() {
 	setTimeout('Func1()', 750);
 	setTimeout(function () {
 		Func2();
-	}, 6000);
+	}, 3000);
 }
 doIt();
 void(null);
