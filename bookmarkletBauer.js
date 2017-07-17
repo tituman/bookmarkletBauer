@@ -394,7 +394,7 @@ function showBookmarklet() {
 	bookmarkLink = bookmarkLink + kstLinkText;
 	bookmarkLink = bookmarkLink + "';}if(cell3=innerDoc.getElementsByName(p0+(cell3name+(emptyCellNumber*100)))){cell3[0].value='";
 	bookmarkLink = bookmarkLink + abgLinkText;
-	bookmarkLink = bookmarkLink + "';}setTimeout('Func1()',750);setTimeout(function(){Func2();},6000);}doIt();void(null);";
+	bookmarkLink = bookmarkLink + "';}}doIt();void(null);";
 	
 	linkShow.href = bookmarkLink;
 	
